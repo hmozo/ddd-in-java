@@ -7,14 +7,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import tv.codely.mooc.application.create.CourseCreator;
+
+
 
 @RestController
 public class CoursesPostController {
+	
+	private CourseCreator creator;
+	
+	public CoursesPostController(CourseCreator creator) {
+		this.creator= creator;
+	}
 
 	@PostMapping("/courses/{id}")
 	public ResponseEntity handle(@PathVariable String id, @RequestBody Request body) {
+		creator.create(id, body.getName(), body.getDuration());
 		return new ResponseEntity(HttpStatus.CREATED);
 	}
 	
