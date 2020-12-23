@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import tv.codely.apps.RequestTestCase;
 
-
 public final class CoursesPostControllerShould extends RequestTestCase{
 
 	@Test
