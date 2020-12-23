@@ -10,11 +10,17 @@
 	</parent>
 	<groupId>tv.codely.apps</groupId>
 	<artifactId>dddinjava</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>ddd-in-java</name>
 	<packaging>pom</packaging>
 	
 	<description>DDD in Java</description>
+	
+	<modules>
+		<module>backoffice-bc</module>
+		<module>mooc-bc</module>
+		<module>apps-core</module>
+	</modules>
 
 	<properties>
 		<java.version>1.8</java.version>
